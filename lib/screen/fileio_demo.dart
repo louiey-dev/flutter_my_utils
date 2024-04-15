@@ -188,7 +188,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: const Text('File Picker example app'),
+        title: const Text('file_picker example app'),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 5.0, right: 5.0),

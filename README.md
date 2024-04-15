@@ -12,6 +12,7 @@ Flutter test code for study
     - title : Button text
     - child : page which moves to
   - from <https://github.com/heavyfran>
+- ListView.builder added with filter feature
 
 ## TO DO
 
