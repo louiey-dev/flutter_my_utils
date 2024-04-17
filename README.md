@@ -15,7 +15,7 @@ Flutter test code for study
 - ListView.builder added with filter feature
 - Button added
   - normally using buttons
-  - 
+- TcpIp Client feature added
 
 ## TO DO
 
