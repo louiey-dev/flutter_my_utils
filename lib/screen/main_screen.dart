@@ -20,47 +20,55 @@ class MainScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // ExpElevatedButton(
-            //     title: "File IO",
-            //     onPressed: () {
-            //       context.push('/fileio');
-            //     }),
-            // ElevatedButton(
-            //     onPressed: () {
-            //       const FileIoScreen();
-            //     },
-            //     child: const Text("File IO")),
-            const CustomButton(
-              title: "File IO (dart:io)",
-              child: FileIoScreen(),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
+        child: Center(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const CustomButton(
+                      title: "File IO (dart:io)",
+                      child: FileIoScreen(),
+                    ),
+                    const SizedBox(width: 20),
+                    CustomButton(
+                      title: "File Picker Demo",
+                      child: FilePickerDemo(),
+                    ),
+                  ],
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomButton(
+                      title: "TcpIp Client Socket",
+                      child: TcpClientSocket(),
+                    ),
+                    SizedBox(width: 20),
+                    CustomButton(
+                      title: "TcpIp Server Socket",
+                      child: TcpServerSocket(),
+                    ),
+                  ],
+                ),
+                // const SizedBox(height: 20),
+                const CustomButton(
+                  title: "ListView.Builder",
+                  child: ListViewBuilderScreen(),
+                ),
+                // const SizedBox(height: 20),
+                const CustomButton(
+                  title: "Flutter Buttons",
+                  child: ButtonScreen(),
+                ),
+              ],
             ),
-            CustomButton(
-              title: "File Picker Demo",
-              child: FilePickerDemo(),
-            ),
-            // const SizedBox(height: 20),
-            const CustomButton(
-              title: "ListView.Builder",
-              child: ListViewBuilderScreen(),
-            ),
-            // const SizedBox(height: 20),
-            const CustomButton(
-              title: "Flutter Buttons",
-              child: ButtonScreen(),
-            ),
-            const CustomButton(
-              title: "TcpIp Client Socket",
-              child: TcpClientSocket(),
-            ),
-            const CustomButton(
-              title: "TcpIp Server Socket",
-              child: TcpServerSocket(),
-            ),
-          ],
+          ),
         ),
       ),
     );
