@@ -21,6 +21,20 @@ class MyUtils {
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
+  void showSnackbarMs(BuildContext context, int milliseconds, String msg) {
+    final snackBar = SnackBar(
+      duration: Duration(milliseconds: milliseconds),
+      content: Text(msg),
+      backgroundColor: Colors.blue,
+      action: SnackBarAction(
+        label: "Done",
+        textColor: Colors.black,
+        onPressed: () {},
+      ),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
   void showSnackbarError(BuildContext context, String msg) {
     final snackBar = SnackBar(
       duration: const Duration(seconds: 2),
