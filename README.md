@@ -16,6 +16,7 @@ Flutter test code for study
 - Button added
   - normally using buttons
 - TcpIp Client feature added
+- TcpIp Server feature added
 
 ## TO DO
 
