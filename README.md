@@ -15,6 +15,10 @@ Flutter test code for study
 - ListView.builder added with filter feature
 - Button added
   - normally using buttons
+  - toggle/slider/slidable button added
+    - slider/slidable button needs to add pub package
+    - in case of slider, if return true inside of onPress, button disappeared. Not sure why it works like this...
+    - in case of slidable, it works as expected
 - TcpIp Client feature added
 - TcpIp Server feature added
 
