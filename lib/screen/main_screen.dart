@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_my_utils/screen/buttons_screen.dart';
+import 'package:flutter_my_utils/screen/buttons.dart';
 import 'package:flutter_my_utils/screen/fileio_demo.dart';
 import 'package:flutter_my_utils/screen/fileio_screen.dart';
 import 'package:flutter_my_utils/screen/listview_builder.dart';
+import 'package:flutter_my_utils/tcpip/tcp_socket_client.dart';
+import 'package:flutter_my_utils/tcpip/tcp_socket_server.dart';
 import 'package:flutter_my_utils/widget/custom_button.dart';
 import 'package:flutter_my_utils/widget/my_widget.dart';
 import 'package:go_router/go_router.dart';
@@ -49,6 +51,14 @@ class MainScreen extends StatelessWidget {
             const CustomButton(
               title: "Flutter Buttons",
               child: ButtonScreen(),
+            ),
+            const CustomButton(
+              title: "TcpIp Client Socket",
+              child: TcpClientSocket(),
+            ),
+            const CustomButton(
+              title: "TcpIp Server Socket",
+              child: TcpServerSocket(),
             ),
           ],
         ),

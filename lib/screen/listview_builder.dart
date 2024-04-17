@@ -4,6 +4,9 @@ List<String> nameList = ["Seoul", "Paris", "NewYork"];
 final _filterController = TextEditingController();
 int _filteredInt = 0;
 
+final List<String> entries = <String>['A', 'B', 'C'];
+final List<int> colorCodes = <int>[600, 500, 400];
+
 class ListViewBuilderScreen extends StatefulWidget {
   const ListViewBuilderScreen({super.key});
 
@@ -58,6 +61,22 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
                   return Text("\t\t\t$idx listed");
                 }
               },
+            ),
+          ),
+          SizedBox(
+            height: 300.0,
+            child: ListView.separated(
+              padding: const EdgeInsets.all(8),
+              itemCount: entries.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  height: 50,
+                  color: Colors.amber[colorCodes[index]],
+                  child: Center(child: Text('Entry ${entries[index]}')),
+                );
+              },
+              separatorBuilder: (BuildContext context, int index) =>
+                  const Divider(),
             ),
           ),
         ],
