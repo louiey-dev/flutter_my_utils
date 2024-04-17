@@ -49,6 +49,7 @@ class ButtonScreen extends StatelessWidget {
                 },
                 // child: const Text("FloatingActionButton"),
                 child: const Icon(Icons.navigation),
+                heroTag: "0",
               ),
               const SizedBox(height: 10),
               FloatingActionButton.extended(
@@ -58,6 +59,7 @@ class ButtonScreen extends StatelessWidget {
                 },
                 // child: const Text("FloatingActionButton"),
                 icon: const Icon(Icons.navigation),
+                heroTag: "1",
               ),
               const SizedBox(height: 10),
               FilledButton(
