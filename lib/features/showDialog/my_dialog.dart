@@ -1,27 +1,43 @@
 import 'package:flutter/material.dart';
 
-class MyDialog extends StatefulWidget {
-  String title;
-  String content;
+Future<void> myDialog(
+    {required BuildContext context,
+    required String title,
+    required String content,
+    required String yesBtnStr,
+    required String noBtnStr,
+    void Function()? yesTap,
+    void Function()? noTap}) {
+  // String title = title;
+  // String content = content;
 
-  VoidCallback? yesTap;
-  VoidCallback? noTap;
+  // VoidCallback? yesTap;
+  // VoidCallback? noTap;
 
-  MyDialog(
-      {Key? key,
-      required this.title,
-      required this.content,
-      void Function()? yesTap,
-      void Function()? noTap})
-      : super(key: key);
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text(title),
+        content: Text(content),
+        actions: [
+          OutlinedButton(
+            child: Text(yesBtnStr),
+            onPressed: () {
+              if (yesTap != null) yesTap();
 
-  @override
-  State<MyDialog> createState() => _MyDialogState();
-}
-
-class _MyDialogState extends State<MyDialog> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+              Navigator.pop(context);
+            },
+          ),
+          OutlinedButton(
+            child: Text(noBtnStr),
+            onPressed: () {
+              if (noTap != null) noTap();
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      );
+    },
+  );
 }
