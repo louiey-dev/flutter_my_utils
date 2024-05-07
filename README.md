@@ -24,6 +24,8 @@ Flutter test code for study
 - heatmap package added
   - fl_heatmap : This is prefer one to me
   - fluttermap_heatmap
+- showDialog/AlertDialog
+  - normal case widget if user should select something
 
 ## TO DO
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_my_utils/features/heatmap/fl_heatmap.dart';
 import 'package:flutter_my_utils/features/heatmap/fluttermap_heatmap.dart';
+import 'package:flutter_my_utils/features/showDialog/show_dialog.dart';
 import 'package:flutter_my_utils/screen/buttons.dart';
 import 'package:flutter_my_utils/screen/fileio_demo.dart';
 import 'package:flutter_my_utils/screen/fileio_screen.dart';
@@ -83,6 +84,10 @@ class MainScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                const CustomButton(
+                  title: "show Dialog",
+                  child: ShowDialogScreen(),
                 ),
               ],
             ),
