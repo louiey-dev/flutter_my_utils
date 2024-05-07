@@ -21,6 +21,9 @@ Flutter test code for study
     - in case of slidable, it works as expected
 - TcpIp Client feature added
 - TcpIp Server feature added
+- heatmap package added
+  - fl_heatmap : This is prefer one to me
+  - fluttermap_heatmap
 
 ## TO DO
 

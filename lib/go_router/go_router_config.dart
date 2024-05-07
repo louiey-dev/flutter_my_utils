@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_my_utils/features/heatmap/fl_heatmap.dart';
 import 'package:flutter_my_utils/screen/fileio_demo.dart';
 import 'package:flutter_my_utils/screen/fileio_screen.dart';
 import 'package:flutter_my_utils/screen/main_screen.dart';
@@ -10,6 +11,7 @@ class RoutePath {
   static const String main = '/';
   static const String splash = '/splash';
   static const String fileio = '/fileio';
+  static const String heatmap = '/heatmap';
 }
 
 final GoRouter router = GoRouter(
@@ -28,6 +30,11 @@ final GoRouter router = GoRouter(
       path: RoutePath.fileio,
       name: 'fileio',
       builder: (context, state) => FilePickerDemo(),
+    ),
+    GoRoute(
+      path: RoutePath.fileio,
+      name: 'heatmap',
+      builder: (context, state) => FlHeatMapScreen(),
     ),
   ],
   initialLocation: '/splash',

@@ -17,14 +17,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      // theme: ThemeData.dark(useMaterial3: true),
       // home: const MyHomePage(title: 'Flutter Empty'),
       home: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerConfig: router,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+        // theme: ThemeData(
+        //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        //   useMaterial3: true,
+        // ),
+        theme: ThemeData.dark(useMaterial3: true),
       ),
     );
   }
