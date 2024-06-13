@@ -1,0 +1,9 @@
+cd /var/run
+cd /opt/work
+iwconfig
+ifconfig wlan0 up
+iwlist wlan0 scan | grep ESSID
+./wpa_supplicant -B -Dnl80211 -iwlan0 -c /var/run/wpa.semi.conf
+udhcpc
+cd /opt/work/trunk/Application/tmp_app
+cd /opt/work/trunk/BSP/AM335X/Linux/linux-4.1.18+gitAUTOINC+bbe8cfc1da-gbbe8cfc/drivers/rtl88x2CS_WiFi
