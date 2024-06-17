@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_my_utils/filesystem/my_filesystem.dart';
-import 'package:flutter_my_utils/screen/fileio_open_readline.dart';
+import 'package:flutter_my_utils/features/fileio/fileio_open_readline.dart';
+import 'package:flutter_my_utils/features/fileio/my_filesystem.dart';
 import 'package:flutter_my_utils/utils/my_utils.dart';
 
 MyFileSystem m_myFs = MyFileSystem();

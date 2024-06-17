@@ -1,5 +1,5 @@
+import 'package:flutter_my_utils/features/fileio/fileio_demo.dart';
 import 'package:flutter_my_utils/features/heatmap/fl_heatmap.dart';
-import 'package:flutter_my_utils/screen/fileio_demo.dart';
 import 'package:flutter_my_utils/screen/main_screen.dart';
 import 'package:flutter_my_utils/screen/splash_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -32,7 +32,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RoutePath.fileio,
       name: 'heatmap',
-      builder: (context, state) => FlHeatMapScreen(),
+      builder: (context, state) => const FlHeatMapScreen(),
     ),
   ],
   initialLocation: '/splash',

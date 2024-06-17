@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class FilePickerDemo extends StatefulWidget {
+  const FilePickerDemo({super.key});
+
   @override
   _FilePickerDemoState createState() => _FilePickerDemoState();
 }
