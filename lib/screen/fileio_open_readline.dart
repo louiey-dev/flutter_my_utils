@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_my_utils/utils/my_utils.dart';
 
 class FileOpenReadLine extends StatefulWidget {
@@ -61,6 +62,12 @@ class _FileOpenReadLineState extends State<FileOpenReadLine> {
     return Column(
       children: [
         const SizedBox(height: 10),
+        const Text(
+          "Read txt line",
+          style: TextStyle(
+              fontWeight: FontWeight.w500, fontSize: 20, color: Colors.amber),
+          // textAlign: TextAlign.start,
+        ),
         DropdownButton(
           value: currCmd,
           items: userCmdList.map<DropdownMenuItem<String>>((String value) {

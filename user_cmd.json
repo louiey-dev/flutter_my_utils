@@ -1,0 +1,13 @@
+[{
+        "description": "cd to /var/run",
+        "command": "cd /var/run"
+    },
+    {
+        "description": "wlan check",
+        "command": "iwconfig"
+    },
+    {
+        "description": "enable wlan",
+        "command": "ifconfig wlan0 up"
+    }
+]

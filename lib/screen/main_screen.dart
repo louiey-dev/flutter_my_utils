@@ -9,8 +9,6 @@ import 'package:flutter_my_utils/screen/listview_builder.dart';
 import 'package:flutter_my_utils/features/tcpip/tcp_socket_client.dart';
 import 'package:flutter_my_utils/features/tcpip/tcp_socket_server.dart';
 import 'package:flutter_my_utils/widget/custom_button.dart';
-import 'package:flutter_my_utils/widget/my_widget.dart';
-import 'package:go_router/go_router.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
