@@ -3,6 +3,7 @@ import 'package:flutter_my_utils/features/fileio/fileio_demo.dart';
 import 'package:flutter_my_utils/features/fileio/fileio_screen.dart';
 import 'package:flutter_my_utils/features/heatmap/fl_heatmap.dart';
 import 'package:flutter_my_utils/features/heatmap/fluttermap_heatmap.dart';
+import 'package:flutter_my_utils/features/http/http_client.dart';
 import 'package:flutter_my_utils/features/showDialog/show_dialog.dart';
 import 'package:flutter_my_utils/screen/buttons.dart';
 import 'package:flutter_my_utils/screen/listview_builder.dart';
@@ -86,6 +87,10 @@ class MainScreen extends StatelessWidget {
                 CustomButton(
                   title: "show Dialog",
                   child: ShowDialogScreen(),
+                ),
+                CustomButton(
+                  title: "http client",
+                  child: HttpClient(),
                 ),
               ],
             ),

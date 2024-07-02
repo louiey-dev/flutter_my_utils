@@ -45,6 +45,11 @@ dependencies:
   fl_heatmap: ^0.4.4
   flutter_map_heatmap: ^0.0.7
   latlong2: ^0.9.1
+  http: ^1.2.1
+  cronet_http: ^1.2.1
+  cupertino_http: ^1.4.0
+  http_image_provider: ^0.0.2
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
