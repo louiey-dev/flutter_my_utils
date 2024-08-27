@@ -27,7 +27,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: RoutePath.fileio,
       name: 'fileio',
-      builder: (context, state) => FilePickerDemo(),
+      builder: (context, state) => const FilePickerDemo(),
     ),
     GoRoute(
       path: RoutePath.fileio,

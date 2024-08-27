@@ -2,12 +2,13 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_my_utils/utils/my_utils.dart';
 
 class FilePickerDemo extends StatefulWidget {
   const FilePickerDemo({super.key});
 
   @override
-  _FilePickerDemoState createState() => _FilePickerDemoState();
+  State<FilePickerDemo> createState() => _FilePickerDemoState();
 }
 
 class _FilePickerDemoState extends State<FilePickerDemo> {
@@ -43,7 +44,8 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
         compressionQuality: 30,
         type: _pickingType,
         allowMultiple: _multiPick,
-        onFileLoading: (FilePickerStatus status) => print(status),
+        onFileLoading: (FilePickerStatus status) =>
+            utils.log(status.toString()),
         allowedExtensions: (_extension?.isNotEmpty ?? false)
             ? _extension?.replaceAll(' ', '').split(',')
             : null,
@@ -58,7 +60,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
       _logException(e.toString());
     }
     if (!mounted) {
-      print("pick file mounted error...");
+      utils.log("pick file mounted error...");
       return;
     }
 
@@ -67,7 +69,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
       _fileName =
           _paths != null ? _paths!.map((e) => e.name).toString() : '...';
       _userAborted = _paths == null;
-      print(_fileName);
+      utils.log(_fileName.toString());
     });
   }
 
@@ -145,7 +147,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
   }
 
   void _logException(String message) {
-    print(message);
+    utils.log(message);
     _scaffoldMessengerKey.currentState?.hideCurrentSnackBar();
     _scaffoldMessengerKey.currentState?.showSnackBar(
       SnackBar(

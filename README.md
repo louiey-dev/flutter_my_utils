@@ -35,4 +35,3 @@ Flutter test code for study
 - getx
 - riverpod
 - http server/client
-- 

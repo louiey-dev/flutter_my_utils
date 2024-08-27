@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_my_utils/utils/my_utils.dart';
 import 'package:slidable_button/slidable_button.dart';
 import 'package:slider_button/slider_button.dart';
+import 'package:flutter_my_utils/utils/my_utils.dart';
 
 class ButtonScreen extends StatefulWidget {
   const ButtonScreen({super.key});
@@ -56,9 +56,9 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 onPressed: () {
                   utils.showSnackbar(context, "FloatingActionButton pressed");
                 },
+                heroTag: "0",
                 // child: const Text("FloatingActionButton"),
                 child: const Icon(Icons.navigation),
-                heroTag: "0",
               ),
               const SizedBox(height: 10),
               FloatingActionButton.extended(

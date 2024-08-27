@@ -27,6 +27,7 @@ class _FluttermapHeatmapState extends State<FluttermapHeatmap> {
 
   var index = 0;
 
+  @override
   initState() {
     _loadData();
     super.initState();
@@ -66,7 +67,8 @@ class _FluttermapHeatmapState extends State<FluttermapHeatmap> {
     });
 
     final map = FlutterMap(
-      options: const MapOptions(center: LatLng(57.8827, -6.0400), zoom: 8.0),
+      options: const MapOptions(
+          initialCenter: LatLng(57.8827, -6.0400), initialZoom: 8.0),
       // options: const MapOptions(center: LatLng(37.36458, 126.92584), zoom: 8.0),
       children: [
         TileLayer(
@@ -75,8 +77,8 @@ class _FluttermapHeatmapState extends State<FluttermapHeatmap> {
         if (data.isNotEmpty)
           HeatMapLayer(
             heatMapDataSource: InMemoryHeatMapDataSource(data: data),
-            heatMapOptions: HeatMapOptions(
-                gradient: this.gradients[this.index], minOpacity: 0.1),
+            heatMapOptions:
+                HeatMapOptions(gradient: gradients[index], minOpacity: 0.1),
             reset: _rebuildStream.stream,
           )
       ],

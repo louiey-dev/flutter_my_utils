@@ -5,7 +5,7 @@ import 'package:flutter_my_utils/features/fileio/fileio_open_readline.dart';
 import 'package:flutter_my_utils/features/fileio/my_filesystem.dart';
 import 'package:flutter_my_utils/utils/my_utils.dart';
 
-MyFileSystem m_myFs = MyFileSystem();
+MyFileSystem myFs = MyFileSystem();
 
 class FileIoScreen extends StatefulWidget {
   const FileIoScreen({super.key});
@@ -28,7 +28,7 @@ class _FileIoScreenState extends State<FileIoScreen> {
         title: const Text("File IO (dart:io)"),
         backgroundColor: Colors.blue,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -60,7 +60,7 @@ class _FileIoScreenState extends State<FileIoScreen> {
                         } else {
                           _binMode = true;
                         }
-                        print(
+                        utils.log(
                             "mode : ${_binMode ? "binary mode" : "text mode"}");
                       });
                     }),

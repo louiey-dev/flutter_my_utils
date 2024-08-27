@@ -21,7 +21,7 @@ class MainScreen extends StatelessWidget {
         title: const Text("My Utils"),
         backgroundColor: Colors.blue,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(20),
         child: Center(

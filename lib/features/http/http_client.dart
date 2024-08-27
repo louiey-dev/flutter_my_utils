@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_my_utils/utils/my_utils.dart';
 import 'dart:convert' as convert;
 
 import 'package:http/http.dart' as http;
@@ -46,8 +47,8 @@ void httpClientApp() async {
     var jsonResponse =
         convert.jsonDecode(response.body) as Map<String, dynamic>;
     var itemCount = jsonResponse['totalItems'];
-    print('Number of books about http: $itemCount.');
+    utils.log('Number of books about http: $itemCount.');
   } else {
-    print('Request failed with status: ${response.statusCode}.');
+    utils.log('Request failed with status: ${response.statusCode}.');
   }
 }
